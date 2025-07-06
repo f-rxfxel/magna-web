@@ -44,19 +44,21 @@ function createBeam(width: number, height: number): Beam {
 export function Hero({
   className,
   intensity = 'strong',
+  children,
 }: AnimatedGradientBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const beamsRef = useRef<Beam[]>([])
   const animationFrameRef = useRef<number>(0)
   const MINIMUM_BEAMS = 20
 
-  const opacityMap = {
-    subtle: 0.7,
-    medium: 0.85,
-    strong: 1,
-  }
-
+  // opacityMap movido para dentro do useEffect
   useEffect(() => {
+    const opacityMap = {
+      subtle: 0.7,
+      medium: 0.85,
+      strong: 1,
+    }
+
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -190,6 +192,13 @@ export function Hero({
           backdropFilter: 'blur(50px)',
         }}
       />
+
+      {/* Floating header slot */}
+      {children && (
+        <div className='absolute left-1/2 top-4 z-20 -translate-x-1/2'>
+          {children}
+        </div>
+      )}
 
       <div className='relative z-10 flex h-screen w-full items-center justify-center'>
         <div className='flex flex-col items-center justify-center gap-6 px-4 text-center'>

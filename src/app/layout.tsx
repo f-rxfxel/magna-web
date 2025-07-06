@@ -1,4 +1,3 @@
-// import Header from '@/components/header'
 import './globals.css'
 
 export const metadata = {
@@ -14,11 +13,7 @@ export default function DashboardLayout({
 }) {
   return (
     <html lang='pt-br'>
-      <body>
-        {/* TODO verificar se a colocação do header está correta na estrutura de arquivos*/}
-        {/* <Header /> */}
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
