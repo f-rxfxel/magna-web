@@ -3,7 +3,7 @@ export const metadata = {
     default: 'MAGNA',
     template: 'MAGNA • %s',
   },
-  description: 'Entrar na sua conta ou criar uma nova conta MAGNA',
+  description: 'Gerencie sua conta e seus imóveis cadastrados',
 }
 
 export default function AuthLayout({
@@ -13,9 +13,9 @@ export default function AuthLayout({
 }) {
   return (
     <>
-      <header>Header (Atenticação)</header>
+      <header>Header (dashboard)</header>
       {children}
-      <footer>Footer (Atenticação)</footer>
+      <footer>Footer (dashboard)</footer>
     </>
   )
 }

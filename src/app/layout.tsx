@@ -14,8 +14,10 @@ export default function DashboardLayout({
 }) {
   return (
     <html lang='pt-br' className='bg-neutral-950 scroll-smooth'>
-      <Header />
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
