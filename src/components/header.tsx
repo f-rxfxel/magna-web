@@ -24,7 +24,7 @@ const Header = ({ floating = false }: HeaderProps) => {
       }`}
       style={floating ? { pointerEvents: 'none' } : {}}
     >
-      <nav className='flex gap-2 p-1 bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-300 pointer-events-auto'>
+      <nav className='flex gap-2 p-1 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-300'>
         {navLinks.map((link) => {
           const isActive =
             pathname === link.path ||
@@ -42,7 +42,7 @@ const Header = ({ floating = false }: HeaderProps) => {
           )
         })}
       </nav>
-      <nav className='p-1 bg-white/5 backdrop-blur-lg rounded-full border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-300 pointer-events-auto'>
+      <nav className='p-1 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl hover:bg-white/10 transition-all duration-300'>
         <SearchModal />
       </nav>
     </header>

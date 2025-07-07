@@ -3,8 +3,6 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
-import logo from '../public/MAGNA-logo.png'
 
 interface AnimatedGradientBackgroundProps {
   className?: string
@@ -168,7 +166,7 @@ export function Hero({
   return (
     <div
       className={cn(
-        'relative min-h-screen w-full overflow-hidden bg-neutral-950',
+        'relative h-full w-full overflow-hidden bg-neutral-950 ',
         className
       )}
     >
@@ -194,13 +192,9 @@ export function Hero({
       />
 
       {/* Floating header slot */}
-      {children && (
-        <div className='absolute left-1/2 top-4 z-20 -translate-x-1/2'>
-          {children}
-        </div>
-      )}
+      {children && <div className=''>{children}</div>}
 
-      <div className='relative z-10 flex h-screen w-full items-center justify-center'>
+      {/* <div className='relative z-10 flex h-screen w-full items-center justify-center'>
         <div className='flex flex-col items-center justify-center gap-6 px-4 text-center'>
           <motion.h1
             className='text-6xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tighter'
@@ -219,7 +213,7 @@ export function Hero({
             Seu acesso exclusivo ao extraordinário.
           </motion.p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

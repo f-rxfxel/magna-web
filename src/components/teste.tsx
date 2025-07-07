@@ -47,7 +47,7 @@ export default function Teste() {
 
             {/* Central Glassmorphism Card */}
             <div className='max-w-4xl mx-auto'>
-              <div className='bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 shadow-2xl p-8 md:p-12 hover:bg-white/10 transition-all duration-300'>
+              <div className='bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl p-8 md:p-12 hover:bg-white/10 transition-all duration-300'>
                 <div className='grid md:grid-cols-3 gap-8 items-center'></div>
               </div>
             </div>
