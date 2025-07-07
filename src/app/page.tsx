@@ -2,7 +2,6 @@
 
 import { Footer } from '@/components/footer'
 import { Hero } from '@/components/hero'
-import Header from '@/components/header'
 import Image from 'next/image'
 import logo from '../public/MAGNA-logo.png'
 import { motion } from 'motion/react'
@@ -10,7 +9,6 @@ import { motion } from 'motion/react'
 export default function Home() {
   return (
     <Hero>
-      <Header />
       <div className='flex h-screen w-full items-center flex-col justify-center gap-6 px-4 text-center'>
         <div className='flex flex-col items-center justify-center gap-6 px-6 mx-auto -mt-48'>
           <Image width={400} src={logo} alt='MAGNA' />

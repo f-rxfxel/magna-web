@@ -1,17 +1,20 @@
 export default function Loading() {
   return (
-    <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <div style={{ marginBottom: 16 }}>
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="20" stroke="#888" strokeWidth="4" opacity="0.2"/>
-        <path d="M44 24a20 20 0 0 1-20 20" stroke="#1976d2" strokeWidth="4" strokeLinecap="round">
-        <animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="1s" repeatCount="indefinite"/>
-        </path>
-      </svg>
+    <div className='mx-auto w-full max-w-sm rounded-md border border-blue-300 p-4'>
+      <div className='flex animate-pulse space-x-4'>
+        <div className='size-10 rounded-full bg-gray-200'></div>
+        <div className='flex-1 space-y-6 py-1'>
+          <div className='h-2 rounded bg-gray-200'></div>
+          <div className='space-y-3'>
+            <div className='grid grid-cols-3 gap-4'>
+              <div className='col-span-2 h-2 rounded bg-gray-200'></div>
+              <div className='col-span-1 h-2 rounded bg-gray-200'></div>
+            </div>
+            <div className='h-2 rounded bg-gray-200'></div>
+          </div>
+        </div>
       </div>
-      <p>Carregando imóveis...</p>
-    </main>
+    </div>
     // TODO criar skeleton de carregamento para a página de imóveis
-
   )
 }
